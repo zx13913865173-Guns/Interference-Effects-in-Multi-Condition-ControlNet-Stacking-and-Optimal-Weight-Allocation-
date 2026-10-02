@@ -1,0 +1,81 @@
+{
+  "sdxl": {
+    "canny": {
+      "depth": {
+        "raw_interference": 0.42,
+        "sii": 0.38,
+        "sii_ci_low": 0.33,
+        "sii_ci_high": 0.43,
+        "recommended_ratio": "40:60",
+        "auto_balance_a": 0.40,
+        "auto_balance_b": 0.60
+      }
+    },
+    "openpose": {
+      "canny": {
+        "raw_interference": 0.61,
+        "sii": 0.56,
+        "sii_ci_low": 0.50,
+        "sii_ci_high": 0.62,
+        "recommended_ratio": "30:70",
+        "auto_balance_a": 0.30,
+        "auto_balance_b": 0.70
+      }
+    },
+    "scribble": {
+      "depth": {
+        "raw_interference": 0.33,
+        "sii": 0.31,
+        "sii_ci_low": 0.26,
+        "sii_ci_high": 0.36,
+        "recommended_ratio": "45:55",
+        "auto_balance_a": 0.45,
+        "auto_balance_b": 0.55
+      }
+    }
+  },
+  "sd15": {
+    "canny": {
+      "depth": {
+        "raw_interference": 0.40,
+        "sii": 0.36,
+        "recommended_ratio": "45:55",
+        "auto_balance_a": 0.45,
+        "auto_balance_b": 0.55
+      }
+    },
+    "openpose": {
+      "canny": {
+        "raw_interference": 0.55,
+        "sii": 0.53,
+        "recommended_ratio": "35:65",
+        "auto_balance_a": 0.35,
+        "auto_balance_b": 0.65
+      }
+    }
+  },
+  "flux": {
+    "canny": {
+      "depth": {
+        "raw_interference": 0.36,
+        "sii": 0.33,
+        "recommended_ratio": "38:62",
+        "auto_balance_a": 0.38,
+        "auto_balance_b": 0.62
+      }
+    },
+    "openpose": {
+      "canny": {
+        "raw_interference": 0.52,
+        "sii": 0.50,
+        "recommended_ratio": "28:72",
+        "auto_balance_a": 0.28,
+        "auto_balance_b": 0.72
+      }
+    }
+  },
+  "cfg_compensation": {
+    "threshold": 10.0,
+    "weaker_condition_bonus": 0.05
+  }
+}
