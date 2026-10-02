@@ -1,22 +1,32 @@
-controlnet-interference/
-├── README.md
-├── LICENSE
-├── requirements.txt
-├── prompts/
-│   └── prompts_100.txt
-├── code/
-│   ├── generate.py
-│   ├── evaluate.py
-│   ├── auto_balance.py
-│   └── utils.py
-├── data/
-│   ├── cfg_generalization.csv
-│   ├── seed_sensitivity.csv
-│   └── utility_sensitivity.csv
-├── appendix/
-│   ├── Appendix_A_Subjective_Evaluation.md
-│   ├── Appendix_B_CFG_Generalization.md
-│   ├── Appendix_C_Seed_Sensitivity.md
-│   └── Appendix_D_Perceptual_Utility_Sensitivity.md
-└── comfyui/
-    └── workflow_controlnet_stacking.json  (说明文件，实际 JSON 由你导出)
+# Interference Effects in Multi-Condition ControlNet Stacking
+
+This repository contains code, prompts, evaluation scripts, and supplementary data for the paper:
+
+**Interference Effects in Multi-Condition ControlNet Stacking and Optimal Weight Allocation: Standardized Interference Coefficients, Fixed-A Variation, Three-Condition Expansion, Cross-Model Validation, and an Auto-Balancing Tool**
+
+Xin Zhang, Dmitry Galkin  
+Tomsk State University, Tomsk, Russia
+
+## Contents
+
+- `prompts/prompts_100.txt` – 100 prompts used across all conditions.
+- `code/generate.py` – Core SDXL + dual ControlNet generation script.
+- `code/evaluate.py` – Condition compliance metrics, SII, fixed-A decomposition, perceptual utility.
+- `code/auto_balance.py` – Auto-balancing tool for ControlNet weight allocation.
+- `code/utils.py` – Helper functions.
+- `data/` – Supplementary CSV files for CFG generalization, seed sensitivity, and utility sensitivity.
+- `appendix/` – Subjective evaluation instruction, CFG data, seed sensitivity, utility sensitivity.
+- `comfyui/` – ComfyUI workflow description (export your own JSON if needed).
+
+## Environment
+
+- GPU: NVIDIA RTX 4070 Super 12GB
+- OS: Windows 11 Pro 23H2
+- Python: 3.10.11
+- PyTorch: 2.1.0+cu121
+- Diffusers: 0.25.0
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
