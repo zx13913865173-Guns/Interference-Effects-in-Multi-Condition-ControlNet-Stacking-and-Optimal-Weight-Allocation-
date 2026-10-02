@@ -1,0 +1,18 @@
+# Appendix E: ComfyUI Workflow for Multi-ControlNet Stacking
+
+The ComfyUI workflow used in this study is provided in the public repository:
+
+`comfyui/workflow_controlnet_stacking.json`
+
+The workflow implements dual-ControlNet stacking with the following structure:
+
+1. Load SDXL Base 1.0 checkpoint.
+2. Load two ControlNet models (e.g., Canny and Depth).
+3. Load a reference image.
+4. Extract Canny edge map and Depth map using `controlnet_aux` preprocessors.
+5. Apply the first ControlNet with conditioning scale 0.4.
+6. Apply the second ControlNet with conditioning scale 0.6.
+7. Generate an image with DPM++ 2M Karras, 30 steps, CFG 7.5, seed 42, resolution 1024×1024.
+8. Save the output image.
+
+The workflow can be imported directly into ComfyUI. Missing custom nodes can be installed via ComfyUI-Manager. The two conditioning scales can be adjusted to any tested weight ratio.
